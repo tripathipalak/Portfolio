@@ -1442,59 +1442,28 @@ h1 .g {
 
 
 /* *******Skill section****** */
-.stack-rows {
-  max-width: 900px;
+.stack-wall {
+  max-width: 980px;
   margin: 0 auto;
+  text-align: center;
 }
 
-.stack-row {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 24px;
-  align-items: baseline;
-  padding: 26px 0;
-  position: relative;
-}
-
-.stack-row + .stack-row::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--a), transparent 70%);
-  opacity: 0.35;
-}
-
-.stack-label {
-  font: 600 13px ui-monospace, Menlo, Consolas, monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--a);
-}
-
-.stack-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 22px;
-}
-
-.stack-items span {
-  font: 500 17px Sora, sans-serif;
+.stack-wall p {
+  margin: 0 0 18px;
+  font: 600 clamp(22px, 3.2vw, 34px)/1.5 Sora, sans-serif;
+  letter-spacing: -0.01em;
   color: var(--muted);
-  transition: color 0.25s, transform 0.25s;
+}
+
+.stack-wall span {
+  transition: color 0.3s, text-shadow 0.3s;
   cursor: default;
 }
 
-.stack-items span:hover {
-  color: var(--text);
-  transform: translateY(-2px);
+.stack-wall span:hover {
+  color: var(--a);
+  text-shadow: 0 0 24px rgba(34, 184, 165, 0.35);
 }
 
-@media (max-width: 700px) {
-  .stack-row {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
+.stack-wall p:nth-child(2) span { color: color-mix(in srgb, var(--muted) 85%, var(--text)); }
+.stack-wall p:nth-child(3) span { color: color-mix(in srgb, var(--muted) 70%, var(--text)); }
