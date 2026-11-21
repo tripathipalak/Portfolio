@@ -1701,3 +1701,17 @@ h1 .g {
 .ct-btn:hover {
   color: var(--a);
 }
+
+.ct-btn svg,
+.ct-mail svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ct-btn svg { fill: currentColor; stroke: none; }
+.ct-btn svg[viewBox] path[d^="M4 4"] { fill: none; stroke: currentColor; stroke-width: 2; }
