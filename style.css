@@ -1213,3 +1213,10 @@ h1 .g {
 @media (max-width: 800px) {
   .about-grid { grid-template-columns: 1fr; }
 }
+
+
+.hero {
+  min-height: 85vh;
+  align-items: center;
+  padding-bottom: 60px;
+}
