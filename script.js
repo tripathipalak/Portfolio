@@ -139,3 +139,9 @@ document.addEventListener("click", function (e) {
     );
   }
 })();
+document.querySelectorAll('.hover-gif').forEach(img => {
+  const still = img.getAttribute('src');
+  const gif = img.dataset.gif;
+  img.addEventListener('mouseenter', () => { img.src = gif; });
+  img.addEventListener('mouseleave', () => { img.src = still; });
+});
