@@ -1284,3 +1284,19 @@ h1 .g {
   flex: 1;
   min-height: 0;
 }
+
+/* Code ko left align karo aur box ke upar se shuru karo */
+.term-body {
+  text-align: left;
+  white-space: pre;
+  font-size: 1rem;
+  line-height: 1.9;
+  padding: 28px 30px;
+  display: block;
+}
+
+/* Box ki height fixed rakho, lekin andar ka content fill kare */
+.term {
+  min-height: 0;
+  height: auto;
+}
