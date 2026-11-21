@@ -1273,3 +1273,14 @@ h1 .g {
 .term-body .v { color: #82aaff; }
 .term-body .p { color: #2dd4bf; }
 .term-body .s { color: #c3e88d; }
+
+.term {
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.term-body {
+  flex: 1;
+  min-height: 0;
+}
