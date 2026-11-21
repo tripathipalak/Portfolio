@@ -1117,3 +1117,99 @@ h1 .g {
     transform: none;
   }
 }
+/* ===== About section ===== */
+.about { padding: 40px 0 20px; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.about-card {
+  position: relative;
+  padding: 32px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(45, 212, 191, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(45, 212, 191, 0.18);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 0%), rgba(45, 212, 191, 0.18), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(45, 212, 191, 0.45);
+  box-shadow: 0 20px 50px -20px rgba(45, 212, 191, 0.35);
+}
+
+.about-card:hover::before { opacity: 1; }
+
+.about-main p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0 0 16px;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: aboutIn 0.7s ease forwards;
+}
+.about-main p:nth-child(2) { animation-delay: 0.15s; }
+.about-main p:nth-child(3) { animation-delay: 0.3s; }
+
+.about-main strong { color: #2dd4bf; font-weight: 600; }
+
+.about-quote {
+  margin-top: 24px !important;
+  padding-left: 16px;
+  border-left: 3px solid #2dd4bf;
+  font-style: normal;
+}
+
+.stat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+.stat-row:last-of-type { border-bottom: none; }
+
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2dd4bf;
+  font-family: "DM Sans", sans-serif;
+}
+
+.stat-value { font-size: 1rem; font-weight: 500; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chips span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: rgba(45, 212, 191, 0.12);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.chips span:hover { transform: scale(1.08); background: rgba(45, 212, 191, 0.25); }
+
+@keyframes aboutIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 800px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
