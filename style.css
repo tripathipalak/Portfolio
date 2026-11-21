@@ -1636,3 +1636,68 @@ h1 .g {
   .foot-row { justify-content: center; text-align: center; }
   .foot-right { flex-wrap: wrap; justify-content: center; }
 }
+
+
+/* ===== Contact section ===== */
+.ct-wrap {
+  margin-top: 100px;
+}
+.ct-plain h2 {
+  font: 600 clamp(26px, 3.6vw, 40px)/1.2 Sora, sans-serif;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+.ct-plain h2 .g {
+  color: var(--a);
+}
+.ct-plain > p {
+  max-width: 68ch;
+  margin: 0 0 32px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.ct-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.ct-mail,
+.ct-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--s2);
+  color: var(--text);
+  text-decoration: none;
+  font: 500 14px ui-monospace, Menlo, Consolas, monospace;
+  transition: transform 0.25s, border-color 0.25s, color 0.25s;
+}
+.ct-mail {
+  background: var(--a);
+  border-color: var(--a);
+  color: var(--bg);
+  font-weight: 600;
+}
+.ct-mail svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ct-btn span {
+  color: var(--muted);
+}
+.ct-mail:hover,
+.ct-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--a);
+}
+.ct-btn:hover {
+  color: var(--a);
+}
