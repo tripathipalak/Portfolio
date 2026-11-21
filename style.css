@@ -1263,10 +1263,10 @@ h1 .g {
   margin: 0;
   padding: 20px 22px;
   font-family: ui-monospace, Consolas, monospace;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.8;
   color: #cfe9e6;
-  white-space: pre-wrap;
+  white-space: pre;
 }
 .term-body .c { color: #5b6b70; }
 .term-body .k { color: #c792ea; }
