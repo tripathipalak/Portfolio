@@ -1561,3 +1561,14 @@ h1 .g {
     padding: 110px 0 48px;
   }
 }
+
+
+.about .sh h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--a);
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
