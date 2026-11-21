@@ -1442,46 +1442,59 @@ h1 .g {
 
 
 /* *******Skill section****** */
-.stack-grid {
+.stack-rows {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stack-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  align-items: baseline;
+  padding: 26px 0;
+  position: relative;
 }
 
-.stack-card {
-  padding: 26px;
-  border-radius: 16px;
-  background: var(--s1);
-  border: 1px solid var(--line);
-  transition: border-color 0.3s, transform 0.3s;
+.stack-row + .stack-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--a), transparent 70%);
+  opacity: 0.35;
 }
 
-.stack-card:hover {
-  border-color: rgba(34, 184, 165, 0.4);
-  transform: translateY(-4px);
-}
-
-.stack-card h3 {
-  font: 600 18px Sora, sans-serif;
+.stack-label {
+  font: 600 13px ui-monospace, Menlo, Consolas, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--a);
-  margin: 0 0 18px;
 }
 
-.stack-chips {
+.stack-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px 22px;
 }
 
-.stack-chips span {
-  padding: 6px 13px;
-  font-size: 14px;
-  border-radius: 999px;
-  background: var(--s2);
-  border: 1px solid var(--line);
+.stack-items span {
+  font: 500 17px Sora, sans-serif;
   color: var(--muted);
+  transition: color 0.25s, transform 0.25s;
+  cursor: default;
 }
 
-@media (max-width: 860px) {
-  .stack-grid { grid-template-columns: 1fr; }
+.stack-items span:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .stack-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
