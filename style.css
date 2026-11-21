@@ -1718,7 +1718,7 @@ h1 .g {
 
 
 
-===== Thin divider between sections =====
+/* ===== Thin divider between sections ===== */
 main > section + section,
 main > .mq + section,
 main > footer {
