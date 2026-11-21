@@ -1300,3 +1300,9 @@ h1 .g {
   min-height: 0;
   height: auto;
 }
+
+.term-body {
+  white-space: pre-wrap;
+  overflow-x: auto;
+  word-break: break-word;
+}
