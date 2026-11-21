@@ -1642,12 +1642,12 @@ h1 .g {
 .ct-wrap {
   margin-top: 100px;
 }
-.ct-plain h2 {
+.ct-plain h3 {
   font: 600 clamp(26px, 3.6vw, 40px)/1.2 Sora, sans-serif;
   letter-spacing: -0.02em;
   margin: 0 0 16px;
 }
-.ct-plain h2 .g {
+.ct-plain h3 .g {
   color: var(--a);
 }
 .ct-plain > p {
@@ -1715,3 +1715,37 @@ h1 .g {
 }
 .ct-btn svg { fill: currentColor; stroke: none; }
 .ct-btn svg[viewBox] path[d^="M4 4"] { fill: none; stroke: currentColor; stroke-width: 2; }
+
+
+
+/* ===== Thin divider between sections ===== */
+main > section + section,
+main > .mq + section,
+main > footer {
+  border-top: 1px solid var(--line);
+}
+
+main > section,
+main > .mq,
+main > footer {
+  position: relative;
+}
+
+main > section + section {
+  padding-top: 80px;
+  margin-top: 80px;
+}
+
+main > .mq {
+  margin-bottom: 0;
+}
+
+main > footer {
+  margin-top: 80px;
+  padding-top: 36px;
+}
+
+/* Hero aur About ke beech line nahi chahiye */
+main > section#about {
+  border-top: 0;
+}
