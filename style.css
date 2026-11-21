@@ -1719,7 +1719,7 @@ h1 .g {
 
 
 ===== Thin divider between sections =====
-/* main > section + section,
+main > section + section,
 main > .mq + section,
 main > footer {
   border-top: 1px solid var(--line);
@@ -1743,60 +1743,9 @@ main > .mq {
 main > footer {
   margin-top: 80px;
   padding-top: 36px;
-} */
+}
 
 /* Hero aur About ke beech line nahi chahiye */
-/* main > section#about {
-  border-top: 0;
-} */
-
-
-/* ===== Full-width section divider line (reference style) ===== */
-main > section,
-main > .mq,
-main > footer {
-  border-top: none;
-}
-
-main > section + section,
-main > section#about,
-main > .mq + section,
-main > section + .mq,
-main > footer {
-  border-top: 1px solid var(--line);
-  margin-left: -24px;
-  margin-right: -24px;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
 main > section#about {
-  margin-left: -24px;
-  margin-right: -24px;
-}
-
-@media (min-width: 1200px) {
-  main > section + section,
-  main > section#about,
-  main > .mq + section,
-  main > section + .mq,
-  main > footer {
-    margin-left: -40px;
-    margin-right: -40px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media (max-width: 600px) {
-  main > section + section,
-  main > section#about,
-  main > .mq + section,
-  main > section + .mq,
-  main > footer {
-    margin-left: -16px;
-    margin-right: -16px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+  border-top: 0;
 }
