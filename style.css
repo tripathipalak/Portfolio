@@ -2173,7 +2173,7 @@ main > section#about {
 
 
 /* ===== Dim achievement thumbnails ===== */
-.ac-thumb {
+/* .ac-thumb {
   background:
     linear-gradient(180deg, rgba(7, 11, 12, 0.1) 0%, rgba(7, 11, 12, 0.6) 100%),
     var(--img) center / cover no-repeat,
@@ -2187,6 +2187,22 @@ main > section#about {
 }
 .ac-card:hover .ac-thumb {
   filter: saturate(1) brightness(1);
+} */
+
+
+.ac-thumb {
+  position: relative;
+  height: 170px;
+  background:
+    linear-gradient(180deg, rgba(7, 11, 12, 0.1) 0%, rgba(7, 11, 12, 0.4) 100%),
+    var(--img) center / cover no-repeat,
+    linear-gradient(135deg, #123a36, #0b1214);
+  filter: brightness(1.2) saturate(1.05);
+  transition: filter 0.3s;
 }
-
-
+.ac-thumb::after {
+  display: none;
+}
+.ac-card:hover .ac-thumb {
+  filter: brightness(1.3) saturate(1.1);
+}
