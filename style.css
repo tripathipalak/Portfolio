@@ -2002,27 +2002,6 @@ main > section#about {
   .ac-card { flex-basis: 85%; }
 } */
 
-
-
-
-/* ===== Dim achievement thumbnails ===== */
-.ac-thumb {
-  background:
-    linear-gradient(180deg, rgba(7, 11, 12, 0.1) 0%, rgba(7, 11, 12, 0.6) 100%),
-    var(--img) center / cover no-repeat,
-    linear-gradient(135deg, #123a36, #0b1214);
-}
-.ac-thumb::after {
-  background: rgba(7, 11, 12, 0.08);
-}
-.ac-thumb {
-  filter: saturate(0.85) brightness(1);
-}
-.ac-card:hover .ac-thumb {
-  filter: saturate(1) brightness(1);
-}
-
-
 /* ===== Achievements & Certifications ===== */
 .ach-head {
   display: flex;
@@ -2191,3 +2170,23 @@ main > section#about {
 @media (max-width: 600px) {
   .ac-card { flex: 0 0 85%; }
 }
+
+
+/* ===== Dim achievement thumbnails ===== */
+.ac-thumb {
+  background:
+    linear-gradient(180deg, rgba(7, 11, 12, 0.1) 0%, rgba(7, 11, 12, 0.6) 100%),
+    var(--img) center / cover no-repeat,
+    linear-gradient(135deg, #123a36, #0b1214);
+}
+.ac-thumb::after {
+  background: rgba(7, 11, 12, 0.08);
+}
+.ac-thumb {
+  filter: saturate(0.85) brightness(1);
+}
+.ac-card:hover .ac-thumb {
+  filter: saturate(1) brightness(1);
+}
+
+
