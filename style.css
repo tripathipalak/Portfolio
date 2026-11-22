@@ -2206,3 +2206,18 @@ main > section#about {
 .ac-card:hover .ac-thumb {
   filter: brightness(1.3) saturate(1.1);
 }
+
+
+/* ===== Equal spacing around contact section ===== */
+main > #contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main > footer,
+.site-footer {
+  margin-top: 0;
+  padding-top: 36px;
+}
