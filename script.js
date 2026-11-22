@@ -139,3 +139,18 @@ document.addEventListener("click", function (e) {
     );
   }
 })();
+
+
+
+
+
+const acTrack = document.querySelector('.ac-track');
+if (acTrack) {
+  const acStep = () => acTrack.querySelector('.ac-card').offsetWidth + 18;
+  document.getElementById('ac-prev').addEventListener('click', () => {
+    acTrack.scrollBy({ left: -acStep(), behavior: 'smooth' });
+  });
+  document.getElementById('ac-next').addEventListener('click', () => {
+    acTrack.scrollBy({ left: acStep(), behavior: 'smooth' });
+  });
+}
