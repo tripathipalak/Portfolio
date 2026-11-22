@@ -8,11 +8,11 @@
     r.dataset.theme = d ? "light" : "dark";
   };
   var ro = [
-      "AI-powered web apps",
-      "MERN stack products",
-      "ML models in Python",
-      "things people use",
-    ],
+    "AI-powered web apps",
+    "MERN stack products",
+    "ML models in Python",
+    "things people use",
+  ],
     el = document.getElementById("ty"),
     i = 0,
     j = 0,
